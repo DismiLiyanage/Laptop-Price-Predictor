@@ -6,15 +6,21 @@ The app uses a trained ML model (predictor.pickle) and provides a clean, easy-to
 🚀 Features
 
 ✔ Predict laptop prices based on hardware specs
+
 ✔ Flask-based backend
+
 ✔ Scikit-Learn ML model
+
 ✔ One-hot encoding for categorical inputs
+
 ✔ Responsive HTML/CSS UI
+
 ✔ Ready for deployment (Heroku/Render)
 
 📸 Web App Preview
 
-(Add screenshots if needed)
+<img width="435" height="430" alt="image" src="https://github.com/user-attachments/assets/84fefd4c-193d-4469-86f5-9a96cb3f17bf" />
+
 
 📂 Project Structure
 Laptop Price Predictor/
@@ -30,21 +36,33 @@ Laptop Price Predictor/
 └── README.md               # Project documentation
 
 🛠 Technologies Used
+
 Backend / ML
 
 Python
+
 Flask
+
 Scikit-Learn
+
 NumPy
+
 Pickle
+
 Frontend
+
 HTML
+
 CSS
+
 Deployment
+
 Gunicorn
+
 Heroku / Render supported
 
 📦 Installation Guide
+
 1. Clone the repository
 git clone <your-repo-link>
 cd laptop-price-predictor
@@ -68,16 +86,27 @@ http://127.0.0.1:5000/
 🧠 How the Model Works
 
 The trained ML model predicts a base price using the following:
+
 Numerical Features:
+
 RAM (GB)
+
 Weight (Kg)
+
 Touchscreen (0/1)
+
 IPS (0/1)
+
 Categorical Features (One-Hot Encoded):
+
 Company
+
 TypeName
+
 Operating System
+
 CPU
+
 GPU
 
 The final prediction is scaled:
@@ -86,17 +115,29 @@ predicted_price = model_prediction * 354
 And then rounded using NumPy.
 
 📝 Input Fields (Frontend)
+
 Feature	Type	Example
+
 RAM	Number	8 GB
+
 Weight	Float	1.5 Kg
+
 Company	Dropdown	Dell, HP, Apple
+
 Type Name	Dropdown	Notebook, Gaming
+
 Operating System	Dropdown	Windows, Mac
+
 CPU	Dropdown	Intel i5, AMD
+
 GPU	Dropdown	Nvidia, Intel
+
 Touchscreen	Checkbox	Yes/No
+
 IPS Panel	Checkbox	Yes/No
+
 🌐 Deployment Guide
+
 Heroku Deployment
 
 Make sure you have a Procfile:
@@ -104,6 +145,7 @@ Make sure you have a Procfile:
 web: gunicorn app:app
 
 Then:
+
 heroku login
 heroku create <app-name>
 git push heroku master
